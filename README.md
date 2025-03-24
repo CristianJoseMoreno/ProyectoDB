@@ -73,13 +73,13 @@ services:
   db:
 	image: postgres:latest
 	environment:
-  	POSTGRES_USER: user
-  	POSTGRES_PASSWORD: password
-  	POSTGRES_DB: proyectodb
+	POSTGRES_USER: user
+	POSTGRES_PASSWORD: password
+	POSTGRES_DB: proyectodb
 	ports:
-  	- "5432:5432"
+	- "5432:5432"
 	volumes:
-  	- proyectodb_postgres-data:/var/lib/postgresql/data
+	- proyectodb_postgres-data:/var/lib/postgresql/data
 
 volumes:
   proyectodb_postgres-data:
@@ -155,7 +155,7 @@ Posteriormente, lo agregamos de nuevo, cometimos los cambios y subimos la rama a
 
 Iniciamos la aplicación donde creamos la base de datos seleccionando Postgree:
 
-(./images/wizard DBeaver.png)
+![Wizard de instalacion](./images/wizard DBeaver.png)
 
 Se conectó a PostgreSQL desde DBeaver utilizando las siguientes credenciales:
 
@@ -167,7 +167,7 @@ Se conectó a PostgreSQL desde DBeaver utilizando las siguientes credenciales:
 
 Se verificó que la conexión fuera exitosa en el propio launcher.
 
-(.images/ERD.png)
+![Diagrama de base de datos](.images/ERD.png)
 
 
 # 🗂️ Paso 7: Crear un Diagrama Entidad-Relación (ERD)
