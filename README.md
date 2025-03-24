@@ -71,19 +71,20 @@ Ahora vamos a crear un archivo `docker-compose.yml` para levantar un contenedor 
 ```yaml
 services:
   db:
-	image: postgres:latest
-	environment:
-	POSTGRES_USER: user
-	POSTGRES_PASSWORD: password
-	POSTGRES_DB: proyectodb
-	ports:
-	- "5432:5432"
-	volumes:
-	- proyectodb_postgres-data:/var/lib/postgresql/data
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: proyectodb
+    ports:
+      - "5432:5432"
+    volumes:
+      - proyectodb_postgres-data:/var/lib/postgresql/data
 
 volumes:
   proyectodb_postgres-data:
-	external: true
+    external: true
+
 ```
 Se han hecho los siguientes cambios a la estructura indicada en la tarea:
 
@@ -155,7 +156,7 @@ Posteriormente, lo agregamos de nuevo, cometimos los cambios y subimos la rama a
 
 Iniciamos la aplicación donde creamos la base de datos seleccionando Postgree:
 
-![Wizard de instalacion](./images/wizard DBeaver.png)
+![Wizard de instalación](./images/wizard.png)
 
 Se conectó a PostgreSQL desde DBeaver utilizando las siguientes credenciales:
 
@@ -167,7 +168,7 @@ Se conectó a PostgreSQL desde DBeaver utilizando las siguientes credenciales:
 
 Se verificó que la conexión fuera exitosa en el propio launcher.
 
-![Diagrama de base de datos](.images/ERD.png)
+![Diagrama de base de datos](./images/ERD.png)
 
 
 # 🗂️ Paso 7: Crear un Diagrama Entidad-Relación (ERD)
